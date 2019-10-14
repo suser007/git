@@ -20,6 +20,7 @@ package com.git.git;
  *      $find .get/objects/ -type f 查看对象目录
  *      $git cat-file -t a09fed43d96c589b1   查看对象类型
  *      $git cat-file -p a09fed43d96c589b1   查看对象内容
+ *
  *      blog     内容
  *      $ git cat-file -p  3d67a68f5f
  *                                      blog:   dwadwad
@@ -90,14 +91,23 @@ package com.git.git;
  *                     -v                     关联信息
  *                     -d xxx                 删除分支
  *
- *      $git merge 分支名                      将分支合并到当前分支
+ *
+ *
+ *       **********************************************
+ *       ******************分之合并*********************
+ *
+ *      克隆下来的项目需要更改，当前分支p1                   p1->p2->p1->上传
+ *      $git branch  p2  创建p2分支
+ *      $git checkout  p2   切换p2   工作ing              p1 ------------------p1-----------------------
+ *      $git checkout  p1   切换p1
+ *      $git merge p2    合并p2                           ----------p2---------------------------------
+ *      $git push -u origin p1  上传p1
  *
  *
  *
- *      commit
- *      blob对象                 存的文件的内容暂存区
- *      tree
- *      tag
+ *      $git init -bare        在linux上创建ssh服务用于搭建远程仓库
+ *
+ *
  */
 public class GitDemo {
 }
